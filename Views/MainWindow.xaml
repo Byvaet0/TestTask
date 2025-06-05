@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="10">
-        <TabControl>
+        <TabControl SelectionChanged="TabControl_SelectionChanged">
             <!-- "Сотрудники" -->
             <TabItem Header="Сотрудники">
                 <Grid>
@@ -16,7 +16,7 @@
                         <ColumnDefinition Width="200" />
                     </Grid.ColumnDefinitions>
 
-                    <DataGrid x:Name="EmployeeGrid" Grid.Column="0" Margin="0 0 10 0"
+                    <DataGrid x:Name="EmployeeGrid" ItemsSource="{Binding Employees}" Grid.Column="0" Margin="0 0 10 0"
                               AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto" />
@@ -42,7 +42,7 @@
                         <ColumnDefinition Width="200" />
                     </Grid.ColumnDefinitions>
 
-                    <DataGrid x:Name="CounterpartyGrid" Grid.Column="0" Margin="0 0 10 0"
+                    <DataGrid x:Name="CounterpartyGrid" ItemsSource="{Binding Counterparties}" Grid.Column="0" Margin="0 0 10 0"
                               AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto" />
@@ -68,14 +68,14 @@
                         <ColumnDefinition Width="200" />
                     </Grid.ColumnDefinitions>
 
-                    <DataGrid x:Name="OrderGrid" Grid.Column="0" Margin="0 0 10 0"
+                    <DataGrid x:Name="OrderGrid" ItemsSource="{Binding Orders}" Grid.Column="0" Margin="0 0 10 0"
                               AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto" />
                             <DataGridTextColumn Header="Дата заказа" Binding="{Binding OrderDate, StringFormat=d}" Width="Auto" />
                             <DataGridTextColumn Header="Сумма" Binding="{Binding Amount}" Width="Auto" />
                             <DataGridTextColumn Header="Сотрудник" Binding="{Binding Employee.FullName}" Width="*" />
-                            <DataGridTextColumn Header="Контрагент" Binding="{Binding Contractor.Name}" Width="*" />
+                            <DataGridTextColumn Header="Контрагент" Binding="{Binding Counterparty.Name}" Width="*" />
                         </DataGrid.Columns>
                     </DataGrid>
 

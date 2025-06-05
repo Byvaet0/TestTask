@@ -24,8 +24,8 @@ namespace TestTask.Models
         [ManyToOne(Column = "employee_id", NotNull = true)]
         public virtual Employee Employee { get; set; }
 
-        [ManyToOne(Column = "contractor_id", NotNull = true)]
-        public virtual Counterparty Contractor { get; set; }
+        [ManyToOne(Column = "counterparty_id", NotNull = true)]
+        public virtual Counterparty Counterparty { get; set; }
     }
 
 }

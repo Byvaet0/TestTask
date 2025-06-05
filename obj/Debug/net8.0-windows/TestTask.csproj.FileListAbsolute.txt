@@ -42,3 +42,4 @@ F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-window
 F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\ref\TestTask.dll
 F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
 F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\MainWindow.baml
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\TestTask.sourcelink.json

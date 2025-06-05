@@ -1,14 +1,7 @@
 ﻿using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using TestTask.Data;
+using TestTask.ViewModel;
 
 namespace TestTask
 {
@@ -17,21 +10,27 @@ namespace TestTask
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainViewModel _viewModel;
         public MainWindow()
         {
             InitializeComponent();
+            _viewModel = new MainViewModel();
+            this.DataContext = _viewModel;
+           
+        }
 
-            try
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.Source is TabControl tabControl)
             {
-                using (var session = NhibernateConfig.OpenSession())
-                {
-                    var tables = session.CreateSQLQuery("SHOW TABLES").List();
-                    MessageBox.Show($"Подключение успешно! Таблиц в БД: {tables.Count}");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка: {ex.Message}");
+                var selectedTab = (TabItem)tabControl.SelectedItem;
+
+                if (selectedTab.Header.ToString() == "Сотрудники")
+                    _viewModel.LoadEmployees();
+                else if (selectedTab.Header.ToString() == "Контрагенты")
+                    _viewModel.LoadCounterparties();
+                else if (selectedTab.Header.ToString() == "Заказы")
+                    _viewModel.LoadOrders();
             }
         }
     }
