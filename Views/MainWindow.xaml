@@ -27,9 +27,9 @@
                     </DataGrid>
 
                     <StackPanel Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0">
-                        <Button Content="Добавить" Margin="0 0 0 10" Height="30"/>
-                        <Button Content="Редактировать" Margin="0 0 0 10" Height="30"/>
-                        <Button Content="Удалить" Margin="0 0 0 10" Height="30"/>
+                        <Button Content="Создать" Margin="0 0 0 10" Height="30" Click="AddButton_Click"/>
+                        <Button Content="Редактировать" Margin="0 0 0 10" Height="30" Click="EditButton_Click"/>
+                        <Button Content="Удалить" Margin="0 0 0 10" Height="30" Click="DelButton_Click"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
@@ -53,9 +53,9 @@
                     </DataGrid>
 
                     <StackPanel Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0">
-                        <Button Content="Добавить" Margin="0 0 0 10" Height="30"/>
-                        <Button Content="Редактировать" Margin="0 0 0 10" Height="30"/>
-                        <Button Content="Удалить" Margin="0 0 0 10" Height="30"/>
+                        <Button Content="Создать" Margin="0 0 0 10" Height="30" Click="AddButton_Click"/>
+                        <Button Content="Редактировать" Margin="0 0 0 10" Height="30" Click="EditButton_Click"/>
+                        <Button Content="Удалить" Margin="0 0 0 10" Height="30" Click="DelButton_Click"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
@@ -64,12 +64,14 @@
             <TabItem Header="Заказы">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="52*" />
+                        <ColumnDefinition Width="45*"/>
+                        <ColumnDefinition Width="190*"/>
                         <ColumnDefinition Width="200" />
                     </Grid.ColumnDefinitions>
 
-                    <DataGrid x:Name="OrderGrid" ItemsSource="{Binding Orders}" Grid.Column="0" Margin="0 0 10 0"
-                              AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True">
+                    <DataGrid x:Name="OrderGrid" ItemsSource="{Binding Orders}" Grid.Column="0" Margin="0,0,10,0"
+                              AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True" Grid.ColumnSpan="3">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto" />
                             <DataGridTextColumn Header="Дата заказа" Binding="{Binding OrderDate, StringFormat=d}" Width="Auto" />
@@ -79,10 +81,10 @@
                         </DataGrid.Columns>
                     </DataGrid>
 
-                    <StackPanel Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0">
-                        <Button Content="Добавить" Margin="0 0 0 10" Height="30"/>
-                        <Button Content="Редактировать" Margin="0 0 0 10" Height="30"/>
-                        <Button Content="Удалить" Margin="0 0 0 10" Height="30"/>
+                    <StackPanel Grid.Column="3" VerticalAlignment="Top">
+                        <Button Content="Создать" Margin="0 0 0 10" Height="30" Click="AddButton_Click"/>
+                        <Button Content="Редактировать" Margin="0 0 0 10" Height="30" Click="EditButton_Click"/>
+                        <Button Content="Удалить" Margin="0 0 0 10" Height="30" Click="DelButton_Click"/>
                     </StackPanel>
                 </Grid>
             </TabItem>

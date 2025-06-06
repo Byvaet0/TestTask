@@ -43,3 +43,15 @@ F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-window
 F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
 F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\MainWindow.baml
 F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\TestTask.sourcelink.json
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\CreateEmployeeWindow.g.cs
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\CreateEmployeeWindow.baml
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\EditEmployeeWindow.g.cs
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\EditEmployeeWindow.baml
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\CreateCounterpartyWindow.g.cs
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\EditCounterpartyWindow.g.cs
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\CreateCounterpartyWindow.baml
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\EditCounterpartyWindow.baml
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\CreateOrderWindow.g.cs
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\EditOrderWindow.g.cs
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\CreateOrderWindow.baml
+F:\программы на C#\TestTask\TestTask\TestTask\obj\Debug\net8.0-windows\Views\EditOrderWindow.baml

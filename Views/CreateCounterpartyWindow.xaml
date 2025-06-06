@@ -1,0 +1,32 @@
+﻿<Window x:Class="TestTask.Views.CreateCounterpartyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestTask.Views"
+        mc:Ignorable="d"
+        Title="CreateCounterpartyWindow" Height="250" Width="804">
+    <Grid Margin="10,10,10,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Название:" Margin="0,0,0,5"/>
+        <TextBox x:Name="NameTextBox" Grid.Row="0" Margin="0,20,0,5"/>
+
+        <TextBlock Text="ИНН:" Grid.Row="1" Margin="0,0,0,5"/>
+        <TextBox x:Name="InnTextBox" Grid.Row="1" Margin="0,20,0,5"/>
+
+        <TextBlock Text="Куратор:" Grid.Row="2" Margin="0,0,0,5"/>
+        <ComboBox x:Name="CuratorComboBox" Grid.Row="2" Margin="0,20,0,5"
+                  DisplayMemberPath="FullName"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,26,0,0" Width="213">
+            <Button Content="Сохранить" Width="100" Margin="0,0,10,0" Click="SaveButton_Click" Height="26"/>
+            <Button Content="Отмена" Width="82" Click="CancelButton_Click" Height="25"/>
+        </StackPanel>
+    </Grid>
+</Window>

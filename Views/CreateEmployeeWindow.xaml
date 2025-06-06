@@ -1,0 +1,38 @@
+﻿<Window x:Class="TestTask.CreateEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestTask"
+        mc:Ignorable="d"
+        Title="Создание сторудника" Height="217" Width="570">
+    <Grid Margin="10,10,10,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="0">
+            <Label Content="ФИО:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="FullNameTextBox" Width="250"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="1">
+            <Label Content="Должность:" Width="100" VerticalAlignment="Center"/>
+            <ComboBox x:Name="PostComboBox" Width="250" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="2">
+            <Label Content="Дата рождения:" Width="100" VerticalAlignment="Center"/>
+            <DatePicker x:Name="BirthDatePicker" Width="250"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="3" Margin="0,39,0,0" Grid.RowSpan="2">
+            <Button Content="Сохранить" Width="90" Click="Save_Click"/>
+            <Button Content="Отмена" Width="90" Margin="5,0,0,0" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

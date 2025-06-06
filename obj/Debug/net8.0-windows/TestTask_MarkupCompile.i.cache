@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 F:\программы на C#\TestTask\TestTask\TestTask\App.xaml
-1-1644662438
+7-2001827753
 
-11-382546933
+21-1897096791
 2121154016073
-Views\MainWindow.xaml;
+Views\CreateCounterpartyWindow.xaml;Views\CreateEmployeeWindow.xaml;Views\CreateOrderWindow.xaml;Views\EditCounterpartyWindow.xaml;Views\EditEmployeeWindow.xaml;Views\EditOrderWindow.xaml;Views\MainWindow.xaml;
 
-True
+False
 

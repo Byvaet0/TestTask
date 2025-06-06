@@ -1,0 +1,43 @@
+﻿<Window x:Class="TestTask.Views.EditOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestTask.Views"
+        mc:Ignorable="d"
+        Title="Изменение заказов" Height="363" Width="604">
+    <Grid Margin="10,10,10,44">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Margin="0 0 0 10">
+            <Label Content="Дата заказа:"/>
+            <DatePicker x:Name="OrderDatePicker" Height="29"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0 0 0 10">
+            <Label Content="Сумма:"/>
+            <TextBox x:Name="AmountTextBox" Height="24"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="0 0 0 10">
+            <Label Content="Сотрудник:"/>
+            <ComboBox x:Name="EmployeeComboBox" DisplayMemberPath="FullName"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Vertical" Margin="0 0 0 10">
+            <Label Content="Контрагент:"/>
+            <ComboBox x:Name="CounterpartyComboBox" DisplayMemberPath="Name"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Сохранить" Margin="0 0 10 0" Width="100" Click="SaveButton_Click" Height="26"/>
+            <Button Content="Отмена" Width="100" Click="CancelButton_Click" Height="27"/>
+        </StackPanel>
+    </Grid>
+</Window>
